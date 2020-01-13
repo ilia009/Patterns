@@ -1,18 +1,19 @@
 package abstractfactory.factories;
 
-import abstractfactory.furniture.FurnitureAsChair;
-import abstractfactory.furniture.FurnitureAsTable;
-import abstractfactory.furniture.WoodChair;
-import abstractfactory.furniture.WoodTable;
+import abstractfactory.products.Furniture;
+import abstractfactory.products.FurnitureType;
+import abstractfactory.products.WoodChair;
+import abstractfactory.products.WoodTable;
 
-public class WoodFurnitureFactory implements FurnitureFactory {
+public class WoodFurnitureFactory extends FurnitureFactory {
     @Override
-    public FurnitureAsChair createChair() {
-        return new WoodChair();
-    }
-
-    @Override
-    public FurnitureAsTable createTable() {
-        return new WoodTable();
+   public Furniture getFurniture(FurnitureType furnitureType) {
+        switch (furnitureType){
+            case TABLE:
+                return new WoodTable();
+            case CHAIR:
+                return new WoodChair();
+        }
+        return null;
     }
 }

@@ -1,27 +1,26 @@
 package abstractfactory;
 
+import abstractfactory.factories.FactoryProducer;
+import abstractfactory.factories.FactoryType;
 import abstractfactory.factories.FurnitureFactory;
-import abstractfactory.factories.SteelFurnitureFactory;
-import abstractfactory.factories.WoodFurnitureFactory;
+import abstractfactory.products.Furniture;
+import abstractfactory.products.FurnitureType;
 
 public class Main {
-    private static Logic someLogic() {
-        Logic app;
-        FurnitureFactory factory;
-
-//
-//            factory = new SteelFurnitureFactory();
-//            app = new Logic(factory);
-
-            factory = new WoodFurnitureFactory();
-            app = new Logic(factory);
-
-        return app;
-    }
 
     public static void main(String[] args) {
-        Logic app = someLogic();
-        app.writeOnConsole();
-    }
+        //call woodfactory
+        FurnitureFactory woodFurnitureFactory = FactoryProducer.getFactory(FactoryType.WOOD_FACTORY);
+        Furniture woodChair = woodFurnitureFactory.getFurniture(FurnitureType.CHAIR);
+        woodChair.showTitle();
+        Furniture woodTable = woodFurnitureFactory.getFurniture(FurnitureType.TABLE);
+        woodTable.showTitle();
 
+        //call steelfactory
+        FurnitureFactory steelFurnitureFactory = FactoryProducer.getFactory(FactoryType.STEEL_FACTRY);
+        Furniture steelChair = steelFurnitureFactory.getFurniture(FurnitureType.CHAIR);
+        steelChair.showTitle();
+        Furniture steelTable = steelFurnitureFactory.getFurniture(FurnitureType.TABLE);
+        steelTable.showTitle();
+    }
 }

@@ -1,11 +1,8 @@
 package abstractfactory.factories;
 
-import abstractfactory.furniture.FurnitureAsChair;
-import abstractfactory.furniture.FurnitureAsTable;
+import abstractfactory.products.Furniture;
+import abstractfactory.products.FurnitureType;
 
-public interface FurnitureFactory {
-
-    FurnitureAsChair createChair();
-    FurnitureAsTable createTable();
-
+public abstract class FurnitureFactory {
+   public abstract Furniture getFurniture(FurnitureType furnitureType);
 }
