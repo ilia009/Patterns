@@ -18,7 +18,8 @@ public class SteelFurnitureFactory extends FurnitureFactory {
                 return new SteelChair();
             case TABLE:
                 return new SteelTable();
+            default:
+                return null;
         }
-        return null;
     }
 }
