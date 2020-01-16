@@ -2,7 +2,7 @@ package prototype;
 
 import java.util.Hashtable;
 
-public class CashedMonsters {
+public class MonsterRegistry {
 
     private  static Hashtable<String, Monster> monstersMap = new Hashtable<>();
 

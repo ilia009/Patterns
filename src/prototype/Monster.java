@@ -1,5 +1,7 @@
 package prototype;
 
+
+//prototype
 public abstract class Monster implements Cloneable {
     private String title;
     private int damage;
