@@ -7,7 +7,7 @@ public class FactoryProducer {
                 return new SteelFurnitureFactory();
             case WOOD_FACTORY:
                 return new WoodFurnitureFactory();
+            default: return null;
         }
-    return null;
-    }
+     }
 }

@@ -41,11 +41,11 @@ public class Office {
         return isSubArend;
     }
 
-    public static OfficeBuilder builder(){
+    public static OfficeBuilder builder() {
         return new OfficeBuilder();
     }
 
-    public static class OfficeBuilder{
+    public static class OfficeBuilder {
         private String title;
         private String district;
         private String exactAddress;
@@ -83,7 +83,7 @@ public class Office {
             return this;
         }
 
-        public Office build(){
+        public Office build() {
             return new Office(title, district, exactAddress, seatsNum, canteenNum, isSubArend);
         }
     }

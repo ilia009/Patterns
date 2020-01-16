@@ -20,12 +20,10 @@ public class Main {
         showOffice(anotherOfice);
     }
 
-    // use returning type String or show exact
-    private static void showOffice(Office office){
+    private static void showOffice(Office office) {
         String report;
-        report = office.getTitle() +"\n"+ office.getDistrict() +"\n"+ office.getExactAddress() +"\n"+ office.getCanteenNum()+"\n"+ office.getSeatsNum();
+        report = office.getTitle() + "\n" + office.getDistrict() + "\n" + office.getExactAddress() + "\n" + office.getCanteenNum() + "\n" + office.getSeatsNum();
         System.out.println(report);
-    //return report;
     }
 
 

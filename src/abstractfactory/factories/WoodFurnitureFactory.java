@@ -13,7 +13,7 @@ public class WoodFurnitureFactory extends FurnitureFactory {
                 return new WoodTable();
             case CHAIR:
                 return new WoodChair();
+            default: return null;
         }
-        return null;
-    }
+     }
 }
