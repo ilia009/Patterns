@@ -21,9 +21,12 @@ public class Main {
         devList.add(devFactory.getDevBySpec("c++"));
         devList.add(devFactory.getDevBySpec("c++"));
 
-        for (Developer dev:devList) {
-            dev.writeCode();
+        devList.forEach(i -> {
+            i.writeCode();
+        });
 
-        }
+        //        for (Developer dev:devList) {
+        //            dev.writeCode();
+        //        }
     }
 }
