@@ -1,4 +1,4 @@
-package structurals.decoratordeveloper;
+package structurals.decoratordev;
 
 public class TeamLead extends DevDecorator{
     public TeamLead(Developer developer) {

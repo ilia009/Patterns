@@ -6,7 +6,7 @@ public class Main {
         Window window = new AppWindow(new RedColor());
         window.draw();
 
-        Window window1 = new AppWindow(new BlueColor());
+        Window window1 = new IconWindow(new BlueColor());
         window1.draw();
     }
 }

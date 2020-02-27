@@ -1,4 +1,4 @@
-package structurals.decoratordeveloper;
+package structurals.decoratordev;
 
 public class DevDecorator implements Developer{
     Developer developer;

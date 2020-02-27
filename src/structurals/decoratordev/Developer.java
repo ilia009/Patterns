@@ -1,4 +1,4 @@
-package structurals.decoratordeveloper;
+package structurals.decoratordev;
 
 public interface Developer {
     String makeJob();

@@ -1,4 +1,4 @@
-package structurals.decoratordeveloper;
+package structurals.decoratordev;
 
 public class Main {
     public static void main(String[] args) {

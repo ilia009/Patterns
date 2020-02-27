@@ -12,11 +12,11 @@ public class DevFactory {
         if (developer == null) {
             switch (spec) {
                 case "java":
-                    System.out.println("take jave ");
+                    System.out.println("take jave developer ");
                     developer = new JavaDeveloper();
                     break;
                 case "c++":
-                    System.out.println("Take c++");
+                    System.out.println("Take c++ developer");
                     developer = new CppDeveloper();
             }
             developers.put(spec, developer);

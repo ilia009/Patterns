@@ -1,12 +1,8 @@
-import static java.util.Objects.isNull;
-
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class Main {
-
 
     private static class Student {
 
@@ -69,6 +65,10 @@ public class Main {
 
         }
 
+        public University(List<Student> students) {
+
+        }
+
         public University setStudents(List<Student> students) {
             this.students = students;
             return this;
@@ -87,8 +87,9 @@ public class Main {
 
             University universityCloned = new University();
 
-            for(Student p : this.getStudents())
+            for (Student p : this.getStudents()) {
                 universityCloned.getStudents().add(p.clone());
+            }
 
             return universityCloned;
         }
@@ -99,26 +100,30 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException, CloneNotSupportedException {
 
         List<Student> students = new ArrayList<>();
-        students.add(new Student("St1", 22));
-        students.add(new Student("St2", 32));
+        students.add(new Student("Anton", 22));
+        students.add(new Student("Alex", 32));
 
-        University university = new University();
+        University university = new University(students);
         university.setStudents(students);
 
+        University bursa = university.clone();
 
-        University bursa =university.clone();
+        showStudents(university,bursa);
 
-        System.out.println("university students:");
-        System.out.println(university.getStudents());
-        System.out.println("bursa students:");
-        System.out.println(bursa.getStudents());
-
-       university.getStudents().get(1).setName("aaa");
-
-
+        university.getStudents().get(1).setName("Dima");
+        university.getStudents().get(1).setAge(19);
         System.out.println();
-        System.out.println("CHANGES");
         System.out.println();
+        System.out.println();
+
+        showStudents(university,bursa);
+
+
+
+    }
+
+
+    private static void showStudents(University university, University bursa){
 
         System.out.println("university students:");
         System.out.println(university.getStudents());
